@@ -19,6 +19,10 @@ async function rollDice() {
   return Math.floor(Math.random() * 6) + 1;
 }
 
+function logRollResult(characterName, characterAtribute, block, rollValue) {
+    console.log(`${characterName} 🎲 rolou um dado de ${block} ${rollValue} + ${characterAtribute} = ${rollValue + characterAtribute}`)
+}
+
 async function playRaceEngine(character1, character2) {
     //rounds
 
@@ -36,22 +40,23 @@ async function playRaceEngine(character1, character2) {
         let p2 = await rollDice()
 
         switch(pista) {
+            //Bloco de reta
             case 1:
                 //Bloco de reta
                 console.log("Bloco: RETA!\n")
                 
                 
-                console.log(`${character1.nome} 🎲 rolou um dado de velocidade ${p1} + ${character1.velocidade} = ${p1 + character1.velocidade}`)
+                await logRollResult(character1.nome, character1.velocidade, "velocidade", p1)
 
-                console.log(`${character2.nome} 🎲 rolou um dado de velocidade ${p2} + ${character2.velocidade} = ${p2 + character2.velocidade}`)
+                await logRollResult(character2.nome, character2.velocidade, "velocidade", p2)
 
                 //Resultado da rodada
                 if((p1 + character1.velocidade) > (p2 + character2.velocidade)) {
-                    console.log(`${character1.nome} marcou ponto!`)
+                    console.log(`${character1.nome} marcou ponto! 🏎️`)
                     console.log("------------------------\n")
                     character1.pontos ++
                 }else if((p2 + character2.velocidade) > (p1 + character1.velocidade)) {
-                    console.log(`${character2.nome} marcou ponto!`)
+                    console.log(`${character2.nome} marcou ponto! 🏎️`)
                     console.log("------------------------\n")
                     character2.pontos ++
                 }else {
@@ -64,17 +69,17 @@ async function playRaceEngine(character1, character2) {
             case 2:
                 console.log("Bloco: CURVA!\n")
                 
-                console.log(`${character1.nome} 🎲 rolou um dado de manobrabilidade ${p1} + ${character1.manobrabilidade} = ${p1 + character1.manobrabilidade}`)
+                await logRollResult(character1.nome, character1.velocidade, "manobrabilidade", p1)
 
-                console.log(`${character2.nome} 🎲 rolou um dado de manobrabilidade ${p2} + ${character2.manobrabilidade} = ${p2 + character2.manobrabilidade}`)
+                await logRollResult(character2.nome, character2.velocidade, "manobrabilidade", p2)
 
                 //Resultado da rodada
                 if((p1 + character1.manobrabilidade) > (p2 + character2.manobrabilidade)) {
-                    console.log(`${character1.nome} marcou ponto!`)
+                    console.log(`${character1.nome} marcou ponto! 🏎️`)
                     console.log("------------------------\n")
                     character1.pontos ++
                 }else if((p2 + character2.manobrabilidade) > (p1 + character1.manobrabilidade)) {
-                    console.log(`${character2.nome} marcou ponto!`)
+                    console.log(`${character2.nome} marcou ponto! 🏎️`)
                     console.log("------------------------\n")
                     character2.pontos ++
                 }else {
