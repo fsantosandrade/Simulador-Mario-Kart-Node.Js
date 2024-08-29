@@ -102,11 +102,11 @@
 <input type="checkbox" id="vitoria-item" />
 <label for="vitoria-item">Ao final, vence quem acumulou mais pontos</label>
 
-<h3>Regras Extras:</h3>
+<h3>❗Regras Extras:</h3>
 
 <b>Cofronto</b>
 
-<input type="checkbox" id="vitoria-item" />
-<label for="vitoria-item">sortear aleatoriamente se é um casco(-1 ponto) ou um bomba(-2 pontos)</label> <br>
-<input type="checkbox" id="vitoria-item" />
-<label for="vitoria-item">quem vence o confronto ganha um turbo (+ 1ponto) aleatoriamente</label>
+<ul>
+<li><input type="checkbox" id="extras-1-item" /> <label for="extras-1-item">sortear aleatoriamente se é um casco(-1 ponto) ou um bomba(-2 pontos)</label></li>
+<li><input type="checkbox" id="extras-2-item" /> <label for="extras-2-item">quem vence o confronto ganha um turbo (+ 1ponto) aleatoriamente</label></li>
+</ul>
