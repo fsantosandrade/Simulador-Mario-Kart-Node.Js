@@ -182,11 +182,20 @@ async function playRaceEngine(character1, character2) {
         }
     }
 
+    //Vencedor
+    winner(character1, character2)
+}
+
+function winner(p1, p2) {
+    //Mostrando pontos
+    console.log(`${p1.nome}: ${p1.pontos} pontos(s)`)
+    console.log(`${p2.nome}: ${p2.pontos} pontos(s)\n`)
+
     //Verificando ganhador
-    if(character1.pontos > character2.pontos) {
-        console.log(`${character1.nome} é o vencedor da corrida! 🏅`)
-    }else if(character2.pontos > character1.pontos) {
-        console.log(`${character2.nome} é o vencedor da corrida! 🏅`)
+    if(p1.pontos > p2.pontos) {
+        console.log(`${p1.nome} é o vencedor da corrida! 🏅`)
+    }else if(p2.pontos > p1.pontos) {
+        console.log(`${p2.nome} é o vencedor da corrida! 🏅`)
     }else {
         console.log("Empate! Ninguém venceu. 💪")
     }
