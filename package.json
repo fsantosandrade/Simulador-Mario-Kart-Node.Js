@@ -1,0 +1,15 @@
+{
+  "name": "mario-kart-simulator",
+  "version": "1.0.0",
+  "description": "Um simulador de corridas inspirado no Mario Kart com regras próprias (feito com base no curso de Noje.JS da DIO).",
+  "main": "src/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felipe Santos",
+  "license": "ISC",
+  "type": "module"
+}
